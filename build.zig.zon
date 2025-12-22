@@ -1,0 +1,12 @@
+.{
+    .name = .zigzuo,
+    .version = "0.0.0",
+    .fingerprint = 0xff8b497e0cc28b9c,
+    .paths = .{"build.zig"},
+    .dependencies = .{
+        .zuo = .{
+            .url = "https://github.com/racket/zuo/archive/v1.12.tar.gz",
+            .hash = "N-V-__8AABbHDQB5Si-o2yMM-3v6VXHuB0JpSK5Y0HlHb5Dg",
+        },
+    },
+}
