@@ -38,10 +38,6 @@ pub fn build(b: *std.Build) !void {
     });
     zuo.step.dependOn(&boot_zuo_run.step);
     zuo.root_module.link_libc = true;
-    zuo.root_module.addCSourceFiles(.{
-        .language = .c,
-        .root = embedded_zuo.dirname(),
-        .files = &.{"stdout"}, // depends on captureStdOut() file naming
-    });
+    zuo.root_module.addCSourceFile(.{ .language = .c, .file = embedded_zuo });
     b.installArtifact(zuo);
 }
